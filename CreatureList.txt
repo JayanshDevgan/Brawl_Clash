@@ -1,0 +1,109 @@
+1. Fire Creatures
+  Creatures:
+
+    Fire Drake
+    Inferno Wolf
+    Flame Scorpion
+    Lava Tiger
+    Ember Phoenix
+    Magma Serpent
+    Pyro Crab
+    Smoldering Wasp
+    Ash Demon
+    Fire Elemental
+
+  Attacks:
+
+    Burn Slash – Deals 20 damage. Usable 5 times per match.
+    Scorching Bite – Deals 30 damage. Usable 4 times per match.
+    Lava Blast – Deals 40 damage in an area of effect (AoE). Usable 3 times per match.
+    Molten Spear – Deals 50 damage to one enemy. Usable 2 times per match.
+    Infernal Eruption (Ultimate) – Deals 100 damage to all enemies. Usable 1 time per match.
+
+2. Water Creatures
+  Creatures:
+
+    Aqua Shark
+    Tidal Turtle
+    Frost Leviathan
+    Coral Serpent
+    Ocean Spirit
+    Tsunami Crab
+    Abyssal Jellyfish
+    Wave Wyvern
+    Water Wisp
+    Ice Golem
+
+  Attacks:
+
+    Splash Strike – Deals 15 damage. Usable 7 times per match.
+    Tidal Wave – Deals 25 damage to all enemies. Usable 4 times per match.
+    Ice Spear – Deals 35 damage and freezes an enemy for 1 turn. Usable 3 times per match.
+    Hydro Bomb – Deals 50 damage. Usable 2 times per match.
+    Abyssal Surge (Ultimate) – Deals 120 damage to all enemies. Usable 1 time per match.
+
+3. Earth Creatures
+  Creatures:
+
+    Stone Golem
+    Forest Guardian
+    Rock Serpent
+    Sand Beetle
+    Iron Rhino
+    Crystal Bear
+    Mud Basilisk
+    Thorned Stag
+    Terra Wurm
+    Earth Elemental
+
+  Attacks:
+
+    Rock Punch – Deals 25 damage. Usable 6 times per match.
+    Vine Whip – Deals 30 damage and reduces enemy speed. Usable 4 times per match.
+    Earthquake – Deals 40 AoE damage. Usable 3 times per match.
+    Boulder Throw – Deals 55 damage to one enemy. Usable 2 times per match.
+    Gaia’s Wrath (Ultimate) – Deals 110 damage to all enemies. Usable 1 time per match.
+  
+4. Air Creatures
+  Creatures:
+
+    Thunderbird
+    Sky Serpent
+    Storm Falcon
+    Wind Elemental
+    Lightning Wolf
+    Cloud Drake
+    Tornado Hawk
+    Thunder Beetle
+    Gale Spirit
+    Storm Wraith
+
+  Attacks:
+
+    Gust Slash – Deals 20 damage. Usable 7 times per match.
+    Lightning Bolt – Deals 30 damage. Usable 5 times per match.
+    Cyclone Spin – Deals 40 damage and stuns for 1 turn. Usable 3 times per match.
+    Tempest Beam – Deals 50 damage. Usable 2 times per match.
+    Heaven’s Fury (Ultimate) – Deals 100 damage to all enemies. Usable 1 time per match.
+ 
+5. Dark Creatures
+  Creatures:
+
+    Shadow Panther
+    Nightcrawler
+    Dread Bat
+    Phantom Specter
+    Wraith Wolf
+    Dark Dragon
+    Void Stalker
+    Nightmare Spider
+    Chaos Wurm
+    Shadow Elemental
+  
+  Attacks:
+
+    Shadow Swipe – Deals 20 damage. Usable 6 times per match.
+    Nightmare Bite – Deals 30 damage and poisons the enemy. Usable 4 times per match.
+    Void Pulse – Deals 40 damage and drains 10 health from the enemy. Usable 3 times per match.
+    Eclipse Slash – Deals 50 damage. Usable 2 times per match.
+    Abyssal Shroud (Ultimate) – Deals 120 damage and reduces all enemy stats for 2 turns. Usable 1 time per match.
