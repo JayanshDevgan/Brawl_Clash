@@ -18,7 +18,6 @@ function love.load()
 
     font = love.graphics.newFont(32)
 
-    -- Main menu buttons
     table.insert(buttons, newButton("Play", function() switchScene("gameModeSelection") end))
     table.insert(buttons, newButton("Settings", function() switchScene("settings") end))
     table.insert(buttons, newButton("Exit", function() love.event.quit(0) end))
@@ -58,6 +57,8 @@ function love.draw()
         drawSettings(WINDOW_WIDTH, WINDOW_HEIGHT)
     elseif currentScene == "gameModeSelection" then
         drawGameModeSelection(WINDOW_WIDTH, WINDOW_HEIGHT)
+    elseif currentScene == "characterSelection" then
+        drawCharacterSelection(WINDOW_WIDTH, WINDOW_HEIGHT)
     elseif currentScene == "emptyScene" then
         drawEmptyScene(WINDOW_WIDTH, WINDOW_HEIGHT)
     end
@@ -111,17 +112,17 @@ function drawGame(WINDOW_WIDTH, WINDOW_HEIGHT)
 end
 
 function drawSettings(WINDOW_WIDTH, WINDOW_HEIGHT)
-    love.graphics.setColor( 1, 1, 1)
+    love.graphics.setColor(1, 1, 1)
     love.graphics.print("Settings Scene", WINDOW_WIDTH / 2 - 50, WINDOW_HEIGHT / 2)
 end
 
 function drawGameModeSelection(WINDOW_WIDTH, WINDOW_HEIGHT)
-    local button_width, button_height = WINDOW_WIDTH / 6, WINDOW_HEIGHT / 12
+    local button_width, button_height = WINDOW_WIDTH /  6, WINDOW_HEIGHT / 12
     local margin = 16
     local cursor_y = 0
 
     local modeButtons = {
-        newButton("Single Player", function() switchScene("game") end),
+        newButton("Single Player", function() switchScene("characterSelection") end),
         newButton("Local Multiplayer", function() switchScene("emptyScene") end)
     }
 
@@ -156,6 +157,43 @@ function drawGameModeSelection(WINDOW_WIDTH, WINDOW_HEIGHT)
 
         cursor_y = cursor_y + (button_height + margin)
     end
+end
+
+function drawCharacterSelection(WINDOW_WIDTH, WINDOW_HEIGHT)
+    local button_width, button_height = WINDOW_WIDTH / 6, WINDOW_HEIGHT / 12
+    local margin = 16
+
+    local startButton = newButton("Start Game", function() 
+        switchScene("game") 
+    end)
+
+    startButton.last = startButton.now
+
+    local bx = (WINDOW_WIDTH / 2) - (button_width / 2)
+    local by = (WINDOW_HEIGHT / 2) - (button_height / 2)
+
+    local mx, my = love.mouse.getPosition()
+    local hover = mx > bx and mx < bx + button_width and
+                  my > by and my < by + button_height
+
+    startButton.now = love.mouse.isDown(1)
+    if startButton.now and not startButton.last and hover then 
+        startButton.fn()
+    end
+
+    local color = hover and {0.3, 0.0, 0.0, 1.0} or {0.3, 0, 0, 0.8}
+
+    love.graphics.setColor(color)
+    love.graphics.rectangle("fill", bx, by, button_width, button_height)
+
+    love.graphics.setColor(0, 0, 0, 1)
+    
+    local text_width, text_height = font:getWidth(startButton.text), font:getHeight(startButton.text)
+    love.graphics.print(
+        startButton.text,
+        font,
+        (WINDOW_WIDTH / 2) - (text_width / 2), by + (button_height / 2) - (text_height / 2)
+    )
 end
 
 function drawEmptyScene(WINDOW_WIDTH, WINDOW_HEIGHT)
