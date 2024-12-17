@@ -14,11 +14,85 @@
 
   Attacks:
 
-    Burn Slash – Deals 20 damage. Usable 5 times per match.
-    Scorching Bite – Deals 30 damage. Usable 4 times per match.
-    Lava Blast – Deals 40 damage in an area of effect (AoE). Usable 3 times per match.
-    Molten Spear – Deals 50 damage to one enemy. Usable 2 times per match.
-    Infernal Eruption (Ultimate) – Deals 100 damage to all enemies. Usable 1 time per match.
+  Fire Drake
+
+    Flame Wing Slash: Deals 20 damage. Usable 6 times.
+    Drake’s Inferno: Deals 35 AoE damage. Usable 3 times.
+    Blazing Roar: Deals 40 damage and reduces enemy defense. Usable 2 times.
+    Pyro Dive: Deals 50 damage. Usable 2 times.
+    Crimson Cataclysm (Ultimate): Deals 100 damage to on eenemies. Usable 1 time.
+ 
+  Inferno Wolf
+
+    Fang Burn: Deals 25 damage. Usable 6 times.
+    Lava Howl: Deals 30 AoE damage. Usable 4 times.
+    Ember Pounce: Deals 40 damage to one enemy. Usable 3 times.
+    Scorching Claws: Deals 45 damage. Usable 2 times.
+    Molten Rampage (Ultimate): Deals 120 damage to one enemy. Usable 1 time.
+ 
+  Flame Scorpion
+
+    Scorching Stinger: Deals 20 damage and poisons. Usable 5 times.
+    Ash Volley: Deals 30 AoE damage. Usable 4 times.
+    Magma Crush: Deals 35 damage. Usable 3 times.
+    Pyro Shield: Reduces 50% damage for 1 turn. Usable 2 times.
+    Infernal Stinger (Ultimate): Deals 10 poisons all enemies. Usable 1 time.
+  
+  Lava Tiger
+
+    Heat Slash: Deals 20 damage. Usable 6 times.
+    Burning Leap: Deals 30 damage to one enemy. Usable 4 times.
+    Fiery Growl: Reduces all enemies’ attack. Usable 3 times.
+    Lava Swipe: Deals 50 damage. Usable 2 times.
+    Volcanic Fury (Ultimate): Deals 100 damage to all enemies. Usable 1 time.
+  
+  Ember Phoenix
+
+    Phoenix Flame: Deals 25 damage. Usable 5 times.
+    Blazing Wings: Deals 30 AoE damage. Usable 4 times.
+    Fire Rebirth: Heals 20 health. Usable 3 times.
+    Infernal Screech: Deals 45 damage. Usable 2 times.
+    Eternal Blaze (Ultimate): Deals 120 damage and restores health. Usable 1 time.
+  
+  Magma Serpent
+
+    Lava Coil: Deals 20 damage. Usable 7 times.
+    Fire Breath: Deals 35 AoE damage. Usable 4 times.
+    Molten Strike: Deals 40 damage. Usable 3 times.
+    Blistering Tail: Deals 50 damage. Usable 2 times.
+    Infernal Vortex (Ultimate): Deals 110 damage and stuns enemies. Usable 1 time.
+  
+  Pyro Crab
+
+    Burn Claw: Deals 20 damage. Usable 6 times.
+    Ash Shell: Reduces damage by 30% for 2 turns. Usable 3 times.
+    Flame Hammer: Deals 40 damage. Usable 3 times.
+    Eruption Claw: Deals 55 damage. Usable 2 times.
+    Volcanic Charge (Ultimate): Deals 120 damage to one enemy. Usable 1 time.
+  
+  Smoldering Wasp
+
+    Fiery Sting: Deals 15 damage and poisons. Usable 7 times.
+    Inferno Swarm: Deals 25 AoE damage. Usable 4 times.
+    Burning Dive: Deals 40 damage. Usable 3 times.
+    Wing Cyclone: Deals 50 damage to one enemy. Usable 2 times.
+    Ash Cloud (Ultimate): Deals 100 damage and blinds enemies for 2 turns. Usable 1 time.
+  
+  Ash Demon
+
+    Infernal Punch: Deals 25 damage. Usable 6 times.
+    Hellfire Blaze: Deals 35 AoE damage. Usable 4 times.
+    Demonic Roar: Reduces all enemies' speed. Usable 3 times.
+    Ash Storm: Deals 45 damage to one enemy. Usable 2 times.
+    Demonic Inferno (Ultimate): Deals 120 damage to all enemies. Usable 1 time.
+  
+  Fire Elemental
+
+    Flare Strike: Deals 20 damage. Usable 7 times.
+    Burning Pulse: Deals 25 damage to one enemy. Usable 5 times.
+    Molten Wall: Reduces damage by 40%. Usable 3 times.
+    Infernal Blast: Deals 50 damage to one enemy. Usable 2 times.
+    Eruption Nova (Ultimate): Deals 100 damage to all enemies. Usable 1 time.
 
 2. Water Creatures
   Creatures:
@@ -35,12 +109,76 @@
     Ice Golem
 
   Attacks:
+Aqua Shark
 
-    Splash Strike – Deals 15 damage. Usable 7 times per match.
-    Tidal Wave – Deals 25 damage to all enemies. Usable 4 times per match.
-    Ice Spear – Deals 35 damage and freezes an enemy for 1 turn. Usable 3 times per match.
-    Hydro Bomb – Deals 50 damage. Usable 2 times per match.
-    Abyssal Surge (Ultimate) – Deals 120 damage to all enemies. Usable 1 time per match.
+Shark Bite: Deals 25 damage. Usable 6 times.
+Tidal Rush: Deals 30 damage to one enemy. Usable 5 times.
+Aqua Shield: Reduces incoming damage by 30% for 2 turns. Usable 3 times.
+Hydro Slash: Deals 45 damage. Usable 2 times.
+Ocean Frenzy (Ultimate): Deals 110 damage to all enemies. Usable 1 time.
+Tidal Turtle
+
+Shell Slam: Deals 20 damage. Usable 7 times.
+Wave Crash: Deals 35 AoE damage. Usable 4 times.
+Aqua Armor: Absorbs 40 damage for 2 turns. Usable 3 times.
+Tsunami Charge: Deals 50 damage to one enemy. Usable 2 times.
+Tidal Surge (Ultimate): Deals 100 damage to all enemies and heals 20 HP. Usable 1 time.
+Frost Leviathan
+
+Ice Fang: Deals 25 damage. Usable 6 times.
+Frozen Breath: Deals 30 damage and freezes for 1 turn. Usable 5 times.
+Arctic Roar: Reduces all enemies’ speed. Usable 3 times.
+Glacial Swipe: Deals 50 damage. Usable 2 times.
+Polar Cataclysm (Ultimate): Deals 120 damage and freezes all enemies. Usable 1 time.
+Coral Serpent
+
+Coral Pierce: Deals 20 damage. Usable 7 times.
+Water Lash: Deals 25 damage to one enemy. Usable 5 times.
+Barrier Reef: Reduces damage by 30% for 2 turns. Usable 3 times.
+Wave Coil: Deals 45 damage to one enemy. Usable 2 times.
+Coral Tsunami (Ultimate): Deals 110 damage to all enemies. Usable 1 time.
+Ocean Spirit
+
+Aqua Slash: Deals 25 damage. Usable 6 times.
+Spirit Torrent: Deals 30 AoE damage. Usable 4 times.
+Water Veil: Absorbs 20 damage for 3 turns. Usable 3 times.
+Crystal Wave: Deals 50 damage. Usable 2 times.
+Tidal Redemption (Ultimate): Deals 120 damage and heals all allies for 20 HP. Usable 1 time.
+Tsunami Crab
+
+Crushing Claw: Deals 25 damage. Usable 6 times.
+Aqua Cyclone: Deals 30 AoE damage. Usable 4 times.
+Shell Barrier: Reduces damage by 50% for 1 turn. Usable 3 times.
+Hydro Claw Strike: Deals 50 damage. Usable 2 times.
+Ocean Rage (Ultimate): Deals 110 damage and stuns all enemies for 1 turn. Usable 1 time.
+Abyssal Jellyfish
+
+Tentacle Swipe: Deals 20 damage. Usable 7 times.
+Electric Pulse: Deals 30 damage and paralyzes for 1 turn. Usable 5 times.
+Abyssal Shield: Absorbs 30 damage for 3 turns. Usable 3 times.
+Hydro Shock: Deals 45 damage. Usable 2 times.
+Abyssal Torrent (Ultimate): Deals 120 damage to all enemies and paralyzes for 1 turn. Usable 1 time.
+Wave Wyvern
+
+Tail Slash: Deals 25 damage. Usable 6 times.
+Water Spiral: Deals 30 AoE damage. Usable 4 times.
+Wyvern Roar: Reduces enemy attack by 20%. Usable 3 times.
+Hydro Dive: Deals 50 damage. Usable 2 times.
+Wyvern’s Wrath (Ultimate): Deals 110 damage to all enemies. Usable 1 time.
+Water Wisp
+
+Wisp Slash: Deals 15 damage. Usable 8 times.
+Geyser Blast: Deals 30 damage to one enemy. Usable 5 times.
+Flowing Form: Dodges the next attack. Usable 3 times.
+Water Arrow: Deals 45 damage. Usable 2 times.
+Torrent Surge (Ultimate): Deals 100 damage and grants dodge to allies. Usable 1 time.
+Ice Golem
+
+Frost Punch: Deals 25 damage. Usable 6 times.
+Frozen Wall: Reduces damage by 40% for 2 turns. Usable 4 times.
+Glacial Impact: Deals 35 AoE damage. Usable 3 times.
+Crystal Hammer: Deals 50 damage. Usable 2 times.
+Arctic Annihilation (Ultimate): Deals 120 damage and freezes all enemies. Usable 1 time.
 
 3. Earth Creatures
   Creatures:
@@ -57,13 +195,77 @@
     Earth Elemental
 
   Attacks:
+Stone Golem
 
-    Rock Punch – Deals 25 damage. Usable 6 times per match.
-    Vine Whip – Deals 30 damage and reduces enemy speed. Usable 4 times per match.
-    Earthquake – Deals 40 AoE damage. Usable 3 times per match.
-    Boulder Throw – Deals 55 damage to one enemy. Usable 2 times per match.
-    Gaia’s Wrath (Ultimate) – Deals 110 damage to all enemies. Usable 1 time per match.
-  
+Rock Slam: Deals 30 damage. Usable 6 times.
+Earthen Shield: Reduces damage by 30% for 2 turns. Usable 5 times.
+Quake Stomp: Deals 40 AoE damage. Usable 3 times.
+Boulder Toss: Deals 50 damage to one enemy. Usable 2 times.
+Terra Smash (Ultimate): Deals 120 damage to all enemies. Usable 1 time.
+Forest Guardian
+
+Vine Lash: Deals 20 damage. Usable 7 times.
+Root Grasp: Deals 25 damage and slows the enemy. Usable 5 times.
+Thorn Wall: Reflects 25% damage for 2 turns. Usable 3 times.
+Leaf Barrage: Deals 45 damage. Usable 2 times.
+Nature's Fury (Ultimate): Deals 100 AoE damage and heals allies for 20 HP. Usable 1 time.
+Rock Serpent
+
+Tail Slam: Deals 25 damage. Usable 6 times.
+Stone Coil: Deals 30 damage and paralyzes for 1 turn. Usable 5 times.
+Petrify: Reduces an enemy's attack by 20%. Usable 3 times.
+Crushing Fang: Deals 50 damage. Usable 2 times.
+Serpent's Quake (Ultimate): Deals 110 AoE damage and stuns all enemies for 1 turn. Usable 1 time.
+Sand Beetle
+
+Sand Swipe: Deals 20 damage. Usable 7 times.
+Dust Cloud: Reduces all enemy accuracy by 20%. Usable 4 times.
+Burrow Strike: Deals 35 damage to one enemy. Usable 3 times.
+Carapace Slam: Deals 50 damage. Usable 2 times.
+Desert Fury (Ultimate): Deals 110 damage to all enemies. Usable 1 time.
+Iron Rhino
+
+Horn Strike: Deals 30 damage. Usable 6 times.
+Charge Smash: Deals 35 AoE damage. Usable 4 times.
+Iron Defense: Reduces damage by 40% for 2 turns. Usable 3 times.
+Stampede: Deals 50 damage to one enemy. Usable 2 times.
+Titan Charge (Ultimate): Deals 120 AoE damage and stuns enemies for 1 turn. Usable 1 time.
+Crystal Bear
+
+Claw Strike: Deals 25 damage. Usable 6 times.
+Crystal Roar: Reduces enemy speed by 20%. Usable 5 times.
+Reflective Armor: Reflects 30% of damage for 2 turns. Usable 3 times.
+Shattering Swipe: Deals 50 damage. Usable 2 times.
+Crystal Avalanche (Ultimate): Deals 120 damage and freezes enemies for 1 turn. Usable 1 time.
+Mud Basilisk
+
+Mud Toss: Deals 20 damage. Usable 7 times.
+Quagmire Grip: Deals 25 damage and slows the enemy for 1 turn. Usable 5 times.
+Mud Barrier: Reduces incoming damage by 30% for 2 turns. Usable 3 times.
+Venom Strike: Deals 45 damage and poisons the enemy. Usable 2 times.
+Basilisk's Curse (Ultimate): Deals 100 AoE damage and poisons all enemies. Usable 1 time.
+Thorned Stag
+
+Horn Jab: Deals 30 damage. Usable 6 times.
+Thorn Burst: Deals 35 AoE damage. Usable 4 times.
+Camouflage: Dodges the next attack. Usable 3 times.
+Branch Slam: Deals 50 damage to one enemy. Usable 2 times.
+Forest Storm (Ultimate): Deals 110 damage and reduces all enemy attack by 20%. Usable 1 time.
+Terra Wurm
+
+Burrow Bite: Deals 25 damage. Usable 6 times.
+Ground Collapse: Deals 30 AoE damage. Usable 4 times.
+Sand Shift: Reduces enemy speed by 20%. Usable 3 times.
+Earth Fang: Deals 50 damage. Usable 2 times.
+Wurmquake (Ultimate): Deals 120 AoE damage. Usable 1 time.
+Earth Elemental
+
+Fist of Stone: Deals 30 damage. Usable 6 times.
+Quaking Smash: Deals 35 AoE damage. Usable 4 times.
+Earthen Armor: Reduces damage by 40% for 2 turns. Usable 3 times.
+Terra Crush: Deals 50 damage to one enemy. Usable 2 times.
+Elemental Wrath (Ultimate): Deals 120 AoE damage and increases allies' defenses for 2 turns. Usable 1 time.
+
 4. Air Creatures
   Creatures:
 
@@ -78,14 +280,78 @@
     Gale Spirit
     Storm Wraith
 
-  Attacks:
+    Attacks:
+Thunderbird
 
-    Gust Slash – Deals 20 damage. Usable 7 times per match.
-    Lightning Bolt – Deals 30 damage. Usable 5 times per match.
-    Cyclone Spin – Deals 40 damage and stuns for 1 turn. Usable 3 times per match.
-    Tempest Beam – Deals 50 damage. Usable 2 times per match.
-    Heaven’s Fury (Ultimate) – Deals 100 damage to all enemies. Usable 1 time per match.
- 
+Feather Slash: Deals 25 damage. Usable 6 times.
+Electro Shock: Deals 30 damage and stuns for 1 turn. Usable 4 times.
+Sky Dive: Deals 40 damage to one enemy. Usable 3 times.
+Thunder Strike: Deals 50 damage in an AoE. Usable 2 times.
+Stormcaller (Ultimate): Deals 120 damage to all enemies and reduces their speed by 20%. Usable 1 time.
+Sky Serpent
+
+Wind Lash: Deals 20 damage. Usable 7 times.
+Coiling Crush: Deals 30 damage and paralyzes for 1 turn. Usable 5 times.
+Cyclone Shot: Deals 40 AoE damage. Usable 3 times.
+Fang Strike: Deals 50 damage to one enemy. Usable 2 times.
+Aerial Wrath (Ultimate): Deals 110 damage to all enemies and increases user evasion for 2 turns. Usable 1 time.
+Storm Falcon
+
+Talon Swipe: Deals 20 damage. Usable 6 times.
+Bolt Dive: Deals 30 damage and stuns for 1 turn. Usable 5 times.
+Wing Gust: Deals 35 damage in an AoE. Usable 3 times.
+Hurricane Sweep: Deals 50 damage and reduces enemy accuracy. Usable 2 times.
+Tempest Break (Ultimate): Deals 120 AoE damage and stuns all enemies. Usable 1 time.
+Wind Elemental
+
+Gale Force: Deals 25 damage. Usable 6 times.
+Whirlwind Crush: Deals 30 AoE damage. Usable 4 times.
+Wind Shield: Reduces incoming damage by 30% for 2 turns. Usable 3 times.
+Air Slice: Deals 45 damage to one enemy. Usable 2 times.
+Tornado Burst (Ultimate): Deals 110 AoE damage and increases ally speed. Usable 1 time.
+Lightning Wolf
+
+Static Fang: Deals 30 damage. Usable 6 times.
+Electric Howl: Deals 35 AoE damage and reduces enemy speed by 20%. Usable 4 times.
+Flash Sprint: Avoids the next attack and increases speed. Usable 3 times.
+Volt Strike: Deals 50 damage to one enemy. Usable 2 times.
+Storm Surge (Ultimate): Deals 120 AoE damage and paralyzes all enemies for 1 turn. Usable 1 time.
+Cloud Drake
+
+Cloud Swipe: Deals 20 damage. Usable 7 times.
+Vapor Cloak: Increases evasion for 2 turns. Usable 5 times.
+Misty Breath: Deals 35 AoE damage and reduces enemy accuracy. Usable 3 times.
+Skyward Slam: Deals 50 damage. Usable 2 times.
+Cloudburst (Ultimate): Deals 110 AoE damage and heals allies by 30 HP. Usable 1 time.
+Tornado Hawk
+
+Beak Jab: Deals 20 damage. Usable 7 times.
+Tornado Spin: Deals 30 AoE damage and stuns enemies. Usable 4 times.
+Wind Blade: Deals 40 damage to one enemy. Usable 3 times.
+Cyclone Fury: Deals 50 AoE damage. Usable 2 times.
+Sky Surge (Ultimate): Deals 120 AoE damage and increases ally attack by 20%. Usable 1 time.
+Thunder Beetle
+
+Horn Shock: Deals 25 damage. Usable 6 times.
+Electric Shield: Reduces incoming damage by 30% for 2 turns. Usable 5 times.
+Zap Charge: Deals 35 damage and stuns for 1 turn. Usable 3 times.
+Thunder Ram: Deals 50 damage to one enemy. Usable 2 times.
+Beetle Blast (Ultimate): Deals 110 AoE damage and paralyzes all enemies. Usable 1 time.
+Gale Spirit
+
+Spirit Swipe: Deals 25 damage. Usable 6 times.
+Wind Surge: Deals 30 AoE damage. Usable 5 times.
+Phantom Gust: Reduces all enemy accuracy by 20%. Usable 3 times.
+Airstrike: Deals 50 damage to one enemy. Usable 2 times.
+Wraith Gale (Ultimate): Deals 120 AoE damage and increases ally evasion. Usable 1 time.
+Storm Wraith
+
+Bolt Slash: Deals 30 damage. Usable 6 times.
+Static Field: Reduces enemy speed and accuracy by 10%. Usable 5 times.
+Lightning Arc: Deals 40 damage and paralyzes for 1 turn. Usable 3 times.
+Electric Strike: Deals 50 AoE damage. Usable 2 times.
+Wraith Storm (Ultimate): Deals 120 AoE damage and reduces all enemy stats for 2 turns. Usable 1 time.
+
 5. Dark Creatures
   Creatures:
 
@@ -99,11 +365,76 @@
     Nightmare Spider
     Chaos Wurm
     Shadow Elemental
-  
-  Attacks:
 
-    Shadow Swipe – Deals 20 damage. Usable 6 times per match.
-    Nightmare Bite – Deals 30 damage and poisons the enemy. Usable 4 times per match.
-    Void Pulse – Deals 40 damage and drains 10 health from the enemy. Usable 3 times per match.
-    Eclipse Slash – Deals 50 damage. Usable 2 times per match.
-    Abyssal Shroud (Ultimate) – Deals 120 damage and reduces all enemy stats for 2 turns. Usable 1 time per match.
+  Attacks:
+Shadow Panther
+
+Night Slash: Deals 25 damage. Usable 6 times.
+Stealth Pounce: Deals 30 damage and reduces enemy accuracy. Usable 4 times.
+Dark Claw: Deals 40 damage to one enemy. Usable 3 times.
+Eclipse Bite: Deals 50 damage and poisons the enemy. Usable 2 times.
+Panther’s Shadow (Ultimate): Deals 120 damage to all enemies and increases user evasion. Usable 1 time.
+Nightcrawler
+
+Creeping Swipe: Deals 20 damage. Usable 7 times.
+Venom Bite: Deals 30 damage and poisons the enemy. Usable 4 times.
+Shadow Leap: Deals 35 damage and avoids the next attack. Usable 3 times.
+Toxic Claw: Deals 50 damage. Usable 2 times.
+Void Descent (Ultimate): Deals 110 damage and drains 30 health from all enemies. Usable 1 time.
+Dread Bat
+
+Wing Slice: Deals 20 damage. Usable 6 times.
+Echo Scream: Deals 30 AoE damage and stuns enemies for 1 turn. Usable 4 times.
+Vampiric Bite: Deals 40 damage and heals for 20% of the damage dealt. Usable 3 times.
+Dark Dive: Deals 50 damage to one enemy. Usable 2 times.
+Nocturnal Terror (Ultimate): Deals 120 AoE damage and reduces all enemy attack power. Usable 1 time.
+Phantom Specter
+
+Spectral Slash: Deals 25 damage. Usable 6 times.
+Haunting Gaze: Reduces enemy accuracy by 20% for 2 turns. Usable 4 times.
+Spirit Drain: Deals 35 damage and transfers 15 health to the user. Usable 3 times.
+Phantom Blade: Deals 50 damage. Usable 2 times.
+Ethereal Vortex (Ultimate): Deals 120 AoE damage and reduces all enemy defenses for 2 turns. Usable 1 time.
+Wraith Wolf
+
+Shadow Fang: Deals 30 damage. Usable 6 times.
+Howl of Fear: Reduces all enemy speed and attack by 10%. Usable 4 times.
+Wraith Claw: Deals 40 damage and poisons one enemy. Usable 3 times.
+Dark Charge: Deals 50 AoE damage. Usable 2 times.
+Lunar Eclipse (Ultimate): Deals 120 AoE damage and increases all ally attack stats by 20%. Usable 1 time.
+Dark Dragon
+
+Obsidian Slash: Deals 25 damage. Usable 6 times.
+Void Flame: Deals 35 AoE damage and burns enemies for 2 turns. Usable 4 times.
+Corrupted Roar: Reduces enemy defenses by 20%. Usable 3 times.
+Shadow Tail Strike: Deals 50 damage to one enemy. Usable 2 times.
+Abyssal Inferno (Ultimate): Deals 120 AoE damage and poisons all enemies for 2 turns. Usable 1 time.
+Void Stalker
+
+Claw of the Abyss: Deals 30 damage. Usable 6 times.
+Shadow Portal: Avoids the next attack and increases evasion. Usable 4 times.
+Ethereal Strike: Deals 40 damage and reduces enemy speed. Usable 3 times.
+Phantom Fang: Deals 50 damage. Usable 2 times.
+Void Collapse (Ultimate): Deals 120 AoE damage and drains 15 health from each enemy. Usable 1 time.
+Nightmare Spider
+
+Venom Sting: Deals 20 damage and poisons the enemy. Usable 7 times.
+Web Snare: Reduces enemy speed by 30%. Usable 5 times.
+Toxic Fang: Deals 40 damage and applies poison for 2 turns. Usable 3 times.
+Shadow Bite: Deals 50 damage to one enemy. Usable 2 times.
+Arachnid Swarm (Ultimate): Deals 110 AoE damage and reduces all enemy stats for 2 turns. Usable 1 time.
+Chaos Wurm
+
+Void Lash: Deals 25 damage. Usable 6 times.
+Corrupt Coil: Deals 30 damage and reduces enemy defenses. Usable 4 times.
+Abyss Spit: Deals 40 AoE damage and poisons enemies. Usable 3 times.
+Dark Surge: Deals 50 damage to one enemy. Usable 2 times.
+Chaos Nova (Ultimate): Deals 120 AoE damage and stuns all enemies for 1 turn. Usable 1 time.
+Shadow Elemental
+
+Void Strike: Deals 20 damage. Usable 7 times.
+Dark Pulse: Deals 30 AoE damage and reduces enemy speed. Usable 4 times.
+Abyssal Bolt: Deals 40 damage and drains 10 health from one enemy. Usable 3 times.
+Eclipse Crush: Deals 50 damage to one enemy. Usable 2 times.
+Eternal Night (Ultimate): Deals 120 AoE damage and increases ally evasion and attack for 2 turns. Usable 1 time.
+

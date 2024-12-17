@@ -1,3 +1,5 @@
+local creatures = require("creatures")
+
 local function newButton(text, fn) 
     return { 
         text = text,
@@ -8,9 +10,56 @@ local function newButton(text, fn)
 end
 
 local buttons = {}
-local font = nil
+local font, background, randomIndex = nil, nil, nil
 local currentScene = "menu" 
-local background = nil
+
+local all_creatures, codex_creatures, ai_codex_creatures = {}, {}, {}
+
+for _, type in pairs(creatures) do
+  for _, creature in pairs(type.creatures) do
+    table.insert(all_creatures, creature)
+  end
+end
+
+function getRandomCreature()
+  math.randomseed(os.time())
+  local random_index = math.random(1, #all_creatures)
+  return all_creatures[random_index]
+end
+
+function show_tables_as_JSON(table, indent)
+  indent = indent or 0
+  local indentString = string.rep("  ", indent)
+  
+  local result = ""
+
+  if type(table) ~= "table" then
+    return tostring(table)
+  end
+
+  result = result .. "{\n"
+
+  for key, value in pairs(table) do 
+    if type(value) == "table" and value.name then
+      result = result .. indentString ..'  "' .. tostring(value.name) .. '": '
+      result = result .. show_tables_as_JSON(value, indent + 1)
+    else
+      result = result .. '"' .. tostring(key) .. '": '
+      
+      if type(value) == "table" then
+        result = result .. show_tables_as_JSON(value, indent + 1)
+      else
+        result = result .. '"' .. tostring(value) .. '"'
+      end
+    end
+
+    result = result .. ",\n"
+  end
+
+  result = result:sub(1, -3) .. "\n" .. indentString .. "}"
+
+  return result
+end
 
 function love.load()
     local iconData = love.image.newImageData("images/game.png")
@@ -25,8 +74,8 @@ end
 
 function loadBackground()
     math.randomseed(os.time())
-    local randomIndex = tostring(math.random(1, 5))
-    local backgroundPath = "images/background/" .. randomIndex .. ".jpeg"
+    randomIndex = math.random(1, 5)
+    local backgroundPath = "images/background/" .. tostring(randomIndex) .. ".jpeg"
     
     print("Trying to load background image from: " .. backgroundPath)
 
@@ -37,12 +86,19 @@ function loadBackground()
     else
         error("Image not found: " .. backgroundPath)
     end
+
+    for i = 1, 6, 1 do
+     table.insert(codex_creatures, getRandomCreature())
+     table.insert(ai_codex_creatures, getRandomCreature())
+    end
+
+--    print(show_tables_as_JSON(codex_creatures))
 end
 
 function switchScene(scene)
     currentScene = scene
     if currentScene == "game" then
-        loadBackground()
+        loadBackground(false)
     end
 end
 
@@ -57,8 +113,6 @@ function love.draw()
         drawSettings(WINDOW_WIDTH, WINDOW_HEIGHT)
     elseif currentScene == "gameModeSelection" then
         drawGameModeSelection(WINDOW_WIDTH, WINDOW_HEIGHT)
-    elseif currentScene == "characterSelection" then
-        drawCharacterSelection(WINDOW_WIDTH, WINDOW_HEIGHT)
     elseif currentScene == "emptyScene" then
         drawEmptyScene(WINDOW_WIDTH, WINDOW_HEIGHT)
     end
@@ -104,10 +158,46 @@ end
 
 function drawGame(WINDOW_WIDTH, WINDOW_HEIGHT)
     love.graphics.setColor(1, 1, 1)
+  
+    local margin, left, right = 40, 20, WINDOW_WIDTH;
+
     if background then
         love.graphics.draw(background, 0, -600) 
     else
         love.graphics.print("Background image not loaded!", 10, 10)
+    end
+
+    local codex_creatures_image = love.graphics.newImage("images/creatures/" .. codex_creatures[1].name .. ".png")
+    local ai_codex_creatures_image = love.graphics.newImage("images/creatures/" .. ai_codex_creatures[1].name .. ".png")
+    local image_height, ai_image_height = codex_creatures_image: getHeight(), ai_codex_creatures_image: getHeight()
+
+    local positions = {
+                        {
+                          {left + margin, (WINDOW_HEIGHT - image_height) * 0.5},
+                          {left + (margin*2), (WINDOW_HEIGHT - image_height) * 1.7},
+                          {left + margin, (WINDOW_HEIGHT - image_height) * 1.7},
+                          {left + margin, (WINDOW_HEIGHT - image_height) * 0.5},
+                          {(left*2 + (margin*2)), (WINDOW_HEIGHT - image_height) * 1.7}
+                        },
+                        {
+                          {right - margin, (WINDOW_HEIGHT - ai_image_height) * 0.5},
+                          {right - margin, (WINDOW_HEIGHT - ai_image_height) * 1.7},
+                          {right - margin, (WINDOW_HEIGHT - ai_image_height) * 1.7},
+                          {right - (margin - 10), (WINDOW_HEIGHT - ai_image_height) * 0.5},
+                          {right - margin, (WINDOW_HEIGHT - ai_image_height) * 1.7}
+                        }
+                      }
+
+    if codex_creatures and ai_codex_creatures then
+      love.graphics.scale(0.7)
+      if positions then
+        love.graphics.draw(codex_creatures_image, positions[1][randomIndex][1], positions[1][randomIndex][2])
+        love.graphics.draw(ai_codex_creatures_image, positions[2][randomIndex][1], positions[2][randomIndex][2])
+      else
+        print("Nil positions table!")
+      end
+    else
+      love.graphics.print("Codex not loaded!", 10 , 10)
     end
 end
 
@@ -122,7 +212,7 @@ function drawGameModeSelection(WINDOW_WIDTH, WINDOW_HEIGHT)
     local cursor_y = 0
 
     local modeButtons = {
-        newButton("Single Player", function() switchScene("characterSelection") end),
+        newButton("Single Player", function() switchScene("game") end),
         newButton("Local Multiplayer", function() switchScene("emptyScene") end)
     }
 
@@ -157,43 +247,6 @@ function drawGameModeSelection(WINDOW_WIDTH, WINDOW_HEIGHT)
 
         cursor_y = cursor_y + (button_height + margin)
     end
-end
-
-function drawCharacterSelection(WINDOW_WIDTH, WINDOW_HEIGHT)
-    local button_width, button_height = WINDOW_WIDTH / 6, WINDOW_HEIGHT / 12
-    local margin = 16
-
-    local startButton = newButton("Start Game", function() 
-        switchScene("game") 
-    end)
-
-    startButton.last = startButton.now
-
-    local bx = (WINDOW_WIDTH / 2) - (button_width / 2)
-    local by = (WINDOW_HEIGHT / 2) - (button_height / 2)
-
-    local mx, my = love.mouse.getPosition()
-    local hover = mx > bx and mx < bx + button_width and
-                  my > by and my < by + button_height
-
-    startButton.now = love.mouse.isDown(1)
-    if startButton.now and not startButton.last and hover then 
-        startButton.fn()
-    end
-
-    local color = hover and {0.3, 0.0, 0.0, 1.0} or {0.3, 0, 0, 0.8}
-
-    love.graphics.setColor(color)
-    love.graphics.rectangle("fill", bx, by, button_width, button_height)
-
-    love.graphics.setColor(0, 0, 0, 1)
-    
-    local text_width, text_height = font:getWidth(startButton.text), font:getHeight(startButton.text)
-    love.graphics.print(
-        startButton.text,
-        font,
-        (WINDOW_WIDTH / 2) - (text_width / 2), by + (button_height / 2) - (text_height / 2)
-    )
 end
 
 function drawEmptyScene(WINDOW_WIDTH, WINDOW_HEIGHT)
