@@ -75,6 +75,7 @@ end
 function loadBackground()
     math.randomseed(os.time())
     randomIndex = math.random(1, 5)
+    randomIndex = 5
     local backgroundPath = "images/background/" .. tostring(randomIndex) .. ".jpeg"
     
     print("Trying to load background image from: " .. backgroundPath)
@@ -169,30 +170,33 @@ function drawGame(WINDOW_WIDTH, WINDOW_HEIGHT)
 
     local codex_creatures_image = love.graphics.newImage("images/creatures/" .. codex_creatures[1].name .. ".png")
     local ai_codex_creatures_image = love.graphics.newImage("images/creatures/" .. ai_codex_creatures[1].name .. ".png")
-    local image_height, ai_image_height = codex_creatures_image: getHeight(), ai_codex_creatures_image: getHeight()
+    local image_height, image_width, ai_image_height, ai_image_width = codex_creatures_image: getHeight(),codex_creatures_image: getWidth(), ai_codex_creatures_image: getHeight(), ai_codex_creatures_image: getWidth()
 
     local positions = {
                         {
                           {left + margin, (WINDOW_HEIGHT - image_height) * 0.5},
-                          {left + (margin*2), (WINDOW_HEIGHT - image_height) * 1.7},
-                          {left + margin, (WINDOW_HEIGHT - image_height) * 1.7},
-                          {left + margin, (WINDOW_HEIGHT - image_height) * 0.5},
-                          {(left*2 + (margin*2)), (WINDOW_HEIGHT - image_height) * 1.7}
+                          {left+250 + (margin*2), (WINDOW_HEIGHT - image_height) * 1.7},
+                          {left+350 + margin, (WINDOW_HEIGHT - image_height) * 1.5},
+                          {left+320 + margin, (WINDOW_HEIGHT - image_height)},
+                          {(left + 250 + (margin*2)), (WINDOW_HEIGHT - image_height) * 1.7}
                         },
                         {
-                          {right - margin, (WINDOW_HEIGHT - ai_image_height) * 0.5},
-                          {right - margin, (WINDOW_HEIGHT - ai_image_height) * 1.7},
-                          {right - margin, (WINDOW_HEIGHT - ai_image_height) * 1.7},
-                          {right - (margin - 10), (WINDOW_HEIGHT - ai_image_height) * 0.5},
-                          {right - margin, (WINDOW_HEIGHT - ai_image_height) * 1.7}
+                          {right + (margin*20), (WINDOW_HEIGHT - ai_image_height) * 0.5},
+                          {right + (margin*15), (WINDOW_HEIGHT - ai_image_height) * 1.7},
+                          {right + (margin*13), (WINDOW_HEIGHT - ai_image_height) * 1.5},
+                          {right + (margin*12), (WINDOW_HEIGHT - ai_image_height)},
+                          {right + (margin*15), (WINDOW_HEIGHT - ai_image_height) * 1.7}
                         }
                       }
 
     if codex_creatures and ai_codex_creatures then
       love.graphics.scale(0.7)
+      local rotation = 0
       if positions then
-        love.graphics.draw(codex_creatures_image, positions[1][randomIndex][1], positions[1][randomIndex][2])
-        love.graphics.draw(ai_codex_creatures_image, positions[2][randomIndex][1], positions[2][randomIndex][2])
+        --love.graphics.draw(love.graphics.newImage("images/creatures/Ice Golem.png"), positions[1][randomIndex][1], positions[1][randomIndex][2], 0, -1 + (2*rotation), 1, image_width, 0)
+        --love.graphics.draw(love.graphics.newImage("images/creatures/Ice Golem.png"), positions[2][randomIndex][1], positions[2][randomIndex][2], 0, 1 - (2*rotation), 1, ai_image_width, 0)
+        love.graphics.draw(codex_creatures_image, positions[1][randomIndex][1], positions[1][randomIndex][2], 0, -1 + (2*rotation), 1, image_width, 0)
+        love.graphics.draw(ai_codex_creatures_image, positions[2][randomIndex][1], positions[2][randomIndex][2], 0,  1 - (2*rotation), 1, ai_image_width, 0)
       else
         print("Nil positions table!")
       end
