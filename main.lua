@@ -7,13 +7,45 @@ local function newButton(text, fn)
         now = false,
         last = false
     }
-end
+end 
 
 local buttons = {}
+
 local font, background, randomIndex = nil, nil, nil
 local currentScene = "menu" 
 
 local all_creatures, codex_creatures, ai_codex_creatures = {}, {}, {}
+
+local function drawProgressBar(x, y, current, max, color)
+    local width = 400
+    local height = 30
+    local progress = current / max
+
+    local borderThickness = 3
+
+    local radius = 8
+
+    love.graphics.setColor(0.2, 0.2, 0.2)
+    love.graphics.rectangle("fill", x, y, width, height, radius, radius)
+
+    local r, g, b = unpack(color)
+    love.graphics.setColor(r, g, b, 0.3)
+    love.graphics.rectangle("line", x - 2, y - 2, width + 4, height + 4, radius, radius)
+
+    love.graphics.setColor(0.1, 0.1, 0.1)
+    love.graphics.setLineWidth(borderThickness)
+    love.graphics.rectangle("line", x, y, width, height, radius, radius)
+
+    local gradientColor = {r * 0.8, g * 0.8, b * 0.8}
+    love.graphics.setColor(gradientColor)
+    love.graphics.rectangle("fill", x, y, width * progress, height, radius, radius)
+
+    love.graphics.setColor(r, g, b, 0.6) 
+    love.graphics.rectangle("fill", x, y, width * progress, height / 2, radius, radius)
+
+    love.graphics.setColor(r, g, b, 0.3) 
+    love.graphics.rectangle("fill", x - 2, y - 2, (width * progress) + 4, height + 4, radius, radius)
+end
 
 for _, type in pairs(creatures) do
   for _, creature in pairs(type.creatures) do
@@ -82,7 +114,6 @@ end
 function loadBackground()
     math.randomseed(os.clock())
     randomIndex = math.random(1, 5)
-    randomIndex = 5
     local backgroundPath = "images/background/" .. tostring(randomIndex) .. ".jpeg"
     
     print("Trying to load background image from: " .. backgroundPath)
@@ -175,6 +206,13 @@ function drawGame(WINDOW_WIDTH, WINDOW_HEIGHT)
         love.graphics.print("Background image not loaded!", 10, 10)
     end
 
+    local health, ai_health = codex_creatures[1].health, ai_codex_creatures[1].health;
+
+    drawProgressBar(WINDOW_WIDTH / margin, WINDOW_HEIGHT / margin, health, codex_creatures[1].health, { 0, 1, 0 })
+    drawProgressBar(WINDOW_WIDTH - margin - 400, WINDOW_HEIGHT / margin, ai_health, ai_codex_creatures[1].health, { 1, 0, 0 })
+    
+    love.graphics.setColor(1, 1, 1)
+
     local codex_creatures_image = love.graphics.newImage("images/creatures/" .. codex_creatures[1].name .. ".png")
     local ai_codex_creatures_image = love.graphics.newImage("images/creatures/" .. ai_codex_creatures[1].name .. ".png")
     local image_height, image_width, ai_image_height, ai_image_width = codex_creatures_image: getHeight(),codex_creatures_image: getWidth(), ai_codex_creatures_image: getHeight(), ai_codex_creatures_image: getWidth()
@@ -201,9 +239,6 @@ function drawGame(WINDOW_WIDTH, WINDOW_HEIGHT)
       local rotation	= get_creature_rotation(false, codex_creatures)
       local ai_rotation = get_creature_rotation(true, ai_codex_creatures)
       if positions then
- --love.graphics.draw(love.graphics.newImage("images/creatures/Ice Golem.png"), positions[1][randomIndex][1], positions[1][randomIndex][2], 0, -1 + (2*rotation), 1, image_width, 0)
-
-    --love.graphics.draw(love.graphics.newImage("images/creatures/Ice Golem.png"), positions[2][randomIndex][1], positions[2][randomIndex][2], 0, 1 - (2*rotation), 1, ai_image_width, 0)
         love.graphics.draw(codex_creatures_image, positions[1][randomIndex][1], positions[1][randomIndex][2], 0, rotation, 1, image_width, 0)
         love.graphics.draw(ai_codex_creatures_image, positions[2][randomIndex][1], positions[2][randomIndex][2], 0, ai_rotation, 1, ai_image_width, 0)
       else
