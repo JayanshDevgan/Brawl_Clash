@@ -22,9 +22,16 @@ for _, type in pairs(creatures) do
 end
 
 function getRandomCreature()
-  math.randomseed(os.time())
+  local rst = math.randomseed(os.clock())
   local random_index = math.random(1, #all_creatures)
   return all_creatures[random_index]
+end
+
+function get_creature_rotation(isAI, creatures)
+	if isAI then
+		return (creatures[1].rotation == 1) and 1 or -1
+	else 	return (creatures[1].rotation == 0) and 1 or -1
+	end
 end
 
 function show_tables_as_JSON(table, indent)
@@ -73,7 +80,7 @@ function love.load()
 end
 
 function loadBackground()
-    math.randomseed(os.time())
+    math.randomseed(os.clock())
     randomIndex = math.random(1, 5)
     randomIndex = 5
     local backgroundPath = "images/background/" .. tostring(randomIndex) .. ".jpeg"
@@ -191,12 +198,14 @@ function drawGame(WINDOW_WIDTH, WINDOW_HEIGHT)
 
     if codex_creatures and ai_codex_creatures then
       love.graphics.scale(0.7)
-      local rotation = 0
+      local rotation	= get_creature_rotation(false, codex_creatures)
+      local ai_rotation = get_creature_rotation(true, ai_codex_creatures)
       if positions then
-        --love.graphics.draw(love.graphics.newImage("images/creatures/Ice Golem.png"), positions[1][randomIndex][1], positions[1][randomIndex][2], 0, -1 + (2*rotation), 1, image_width, 0)
-        --love.graphics.draw(love.graphics.newImage("images/creatures/Ice Golem.png"), positions[2][randomIndex][1], positions[2][randomIndex][2], 0, 1 - (2*rotation), 1, ai_image_width, 0)
-        love.graphics.draw(codex_creatures_image, positions[1][randomIndex][1], positions[1][randomIndex][2], 0, -1 + (2*rotation), 1, image_width, 0)
-        love.graphics.draw(ai_codex_creatures_image, positions[2][randomIndex][1], positions[2][randomIndex][2], 0,  1 - (2*rotation), 1, ai_image_width, 0)
+ --love.graphics.draw(love.graphics.newImage("images/creatures/Ice Golem.png"), positions[1][randomIndex][1], positions[1][randomIndex][2], 0, -1 + (2*rotation), 1, image_width, 0)
+
+    --love.graphics.draw(love.graphics.newImage("images/creatures/Ice Golem.png"), positions[2][randomIndex][1], positions[2][randomIndex][2], 0, 1 - (2*rotation), 1, ai_image_width, 0)
+        love.graphics.draw(codex_creatures_image, positions[1][randomIndex][1], positions[1][randomIndex][2], 0, rotation, 1, image_width, 0)
+        love.graphics.draw(ai_codex_creatures_image, positions[2][randomIndex][1], positions[2][randomIndex][2], 0, ai_rotation, 1, ai_image_width, 0)
       else
         print("Nil positions table!")
       end
