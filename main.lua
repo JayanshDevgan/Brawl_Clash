@@ -47,6 +47,40 @@ local function drawProgressBar(x, y, current, max, color)
     love.graphics.rectangle("fill", x - 2, y - 2, (width * progress) + 4, height + 4, radius, radius)
 end
 
+local function drawAttacks(X, Y, attacks, images)
+	local boxWidth, boxHeight, padding = 60, 80, 10
+	local keys = { "Q", "W", "E", "R", "T" }
+
+	for _, attack in ipairs(attacks) do
+		local x = X + (_ - 1) * (boxWidth + padding)
+		local y = Y
+
+		love.graphics.setColor(0.2, 0.2, 0.2, 1)
+		love.graphics.rectangle("fill", x, y, boxWidth, boxHeight, 10, 10)
+
+		love.graphics.setColor(0.8, 0.8, 0.8, 1)
+		love.graphics.setLineWidth(2)
+		love.graphics.rectangle("line", x, y, boxWidth, boxHeight)
+
+		if images[_] then
+			local img = images[_]
+			local imgWidth, imgHeight = img:getDimensions()
+			local scaleX = (boxWidth - 20) / imgWidth
+			local scaleY = (boxHeight - 60) / imgHeight
+			love.graphics.draw(img, x + 10, y + 20, 0, math.min(scaleX, scaleY))
+		end
+		
+		love.graphics.setFont(love.graphics.newFont(20))	
+	
+		love.graphics.setColor(1, 1, 1, 1)
+		love.graphics.print(keys[_] or "", x + 5, y + 5)
+
+		love.graphics.printf(tostring(attack.usable or 0), x, y + boxHeight - 25t , boxWidth - 5, "right")
+
+		love.graphics.setFont(love.graphics.newFont())
+	end
+end
+
 for _, type in pairs(creatures) do
   for _, creature in pairs(type.creatures) do
     table.insert(all_creatures, creature)
@@ -208,9 +242,8 @@ function drawGame(WINDOW_WIDTH, WINDOW_HEIGHT)
 
     local health, ai_health = codex_creatures[1].health, ai_codex_creatures[1].health;
 
-    drawProgressBar(WINDOW_WIDTH / margin, WINDOW_HEIGHT / margin, health, codex_creatures[1].health, { 0, 1, 0 })
-    drawProgressBar(WINDOW_WIDTH - margin - 400, WINDOW_HEIGHT / margin, ai_health, ai_codex_creatures[1].health, { 1, 0, 0 })
-    
+    local stats_x, stats_y, ai_stats_x, ai_stats_y = WINDOW_WIDTH / margin, WINDOW_HEIGHT / margin, WINDOW_WIDTH + 400, WINDOW_HEIGHT / margin
+
     love.graphics.setColor(1, 1, 1)
 
     local codex_creatures_image = love.graphics.newImage("images/creatures/" .. codex_creatures[1].name .. ".png")
@@ -247,6 +280,13 @@ function drawGame(WINDOW_WIDTH, WINDOW_HEIGHT)
     else
       love.graphics.print("Codex not loaded!", 10 , 10)
     end
+
+    drawProgressBar(stats_x, stats_y, health, codex_creatures[1].health, { 0, 1, 0 })
+    drawProgressBar(ai_stats_x, ai_stats_y, ai_health, ai_codex_creatures[1].health, { 1, 0, 0 })
+ 
+    drawAttacks(stats_x, stats_y + 50, codex_creatures[1].attacks, {})
+    drawAttacks(ai_stats_x + 60, ai_stats_y + 50, ai_codex_creatures[1].attacks, {})
+
 end
 
 function drawSettings(WINDOW_WIDTH, WINDOW_HEIGHT)
