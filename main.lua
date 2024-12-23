@@ -16,6 +16,19 @@ local currentScene = "menu"
 
 local all_creatures, codex_creatures, ai_codex_creatures = {}, {}, {}
 
+local function drawCreaturesNames(x, y, creature)
+	fontSize = 32
+	spacing  = 10
+
+	local font = love.graphics.newFont(fontSize)
+	love.graphics.setFont(font)
+	love.graphics.setColor(0, 0, 0)
+
+	love.graphics.print(creature.name, x, y * (fontSize + spacing))
+	love.graphics.setFont(love.graphics.getFont())
+	love.graphics.setColor(1, 1, 1)
+end
+
 local function drawProgressBar(x, y, current, max, color)
     local width = 400
     local height = 30
@@ -47,7 +60,7 @@ local function drawProgressBar(x, y, current, max, color)
     love.graphics.rectangle("fill", x - 2, y - 2, (width * progress) + 4, height + 4, radius, radius)
 end
 
-local function drawAttacks(X, Y, attacks, images)
+local function drawAttacks(X, Y, attacks)
 	local boxWidth, boxHeight, padding = 60, 80, 10
 	local keys = { "Q", "W", "E", "R", "T" }
 
@@ -62,20 +75,24 @@ local function drawAttacks(X, Y, attacks, images)
 		love.graphics.setLineWidth(2)
 		love.graphics.rectangle("line", x, y, boxWidth, boxHeight)
 
-		if images[_] then
-			local img = images[_]
-			local imgWidth, imgHeight = img:getDimensions()
-			local scaleX = (boxWidth - 20) / imgWidth
-			local scaleY = (boxHeight - 60) / imgHeight
-			love.graphics.draw(img, x + 10, y + 20, 0, math.min(scaleX, scaleY))
-		end
-		
+		local attack_image_path = "images/attacks/" .. tostring(attack.name) .. ".jpeg"
+
+		if attack_image_path then
+			local success, img = pcall(love.graphics.newImage, attack_image_path)
+			if success then
+				local imgWidth, imgHeight = img:getDimensions()
+				local scaleX = boxWidth / imgWidth
+				local scaleY = imgHeight / boxHeight
+				love.graphics.draw(img, x + 10, y + 20, 0, math.min(scaleX, scaleY))
+			end
+		end`
+
 		love.graphics.setFont(love.graphics.newFont(20))	
-	
+
 		love.graphics.setColor(1, 1, 1, 1)
 		love.graphics.print(keys[_] or "", x + 5, y + 5)
 
-		love.graphics.printf(tostring(attack.usable or 0), x, y + boxHeight - 25t , boxWidth - 5, "right")
+		love.graphics.printf(tostring(attack.usable or 0), x, y + boxHeight - 25 , boxWidth - 5, "right")
 
 		love.graphics.setFont(love.graphics.newFont())
 	end
@@ -281,11 +298,14 @@ function drawGame(WINDOW_WIDTH, WINDOW_HEIGHT)
       love.graphics.print("Codex not loaded!", 10 , 10)
     end
 
+    drawCreaturesNames(stats_x, stats_y, codex_creatures[1])
+    drawCreaturesNames(ai_stats_x, ai_stats_y, ai_codex_creatures[1])
+
     drawProgressBar(stats_x, stats_y, health, codex_creatures[1].health, { 0, 1, 0 })
     drawProgressBar(ai_stats_x, ai_stats_y, ai_health, ai_codex_creatures[1].health, { 1, 0, 0 })
  
-    drawAttacks(stats_x, stats_y + 50, codex_creatures[1].attacks, {})
-    drawAttacks(ai_stats_x + 60, ai_stats_y + 50, ai_codex_creatures[1].attacks, {})
+    drawAttacks(stats_x, stats_y + 50, codex_creatures[1].attacks)
+    drawAttacks(ai_stats_x + 60, ai_stats_y + 50, ai_codex_creatures[1].attacks)
 
 end
 

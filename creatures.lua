@@ -12,7 +12,7 @@ local creatures = {
                     { name = "Drake’s Inferno", damage = 35, aoe = 1, usable = 3 },
                     { name = "Blazing Roar", damage = 40, reduce_defense = 1, usable = 2 },
                     { name = "Pyro Dive", damage = 50, usable = 2 },
-                    { name = "Crimson Cataclysm (Ultimate)", damage = 100, aoe = 1, usable = 1 }
+                    { name = "Crimson Cataclysm", damage = 100, aoe = 1, usable = 1 }
                 }
             },
             inferno_wolf = {
@@ -26,7 +26,7 @@ local creatures = {
                     { name = "Lava Howl", damage = 30, aoe = 1, usable = 4 },
                     { name = "Ember Pounce", damage = 40, usable = 3 },
                     { name = "Scorching Claws", damage = 45, usable = 2 },
-                    { name = "Molten Rampage (Ultimate)", damage = 120, usable = 1 }
+                    { name = "Molten Rampage", damage = 120, usable = 1 }
                 }
             },
             flame_scorpion = {
@@ -40,7 +40,7 @@ local creatures = {
                     { name = "Ash Volley", damage = 30, aoe = 1, usable = 4 },
                     { name = "Magma Crush", damage = 35, usable = 3 },
                     { name = "Pyro Shield", reduce_damage = 50, duration = 1, usable = 2 },
-                    { name = "Infernal Stinger (Ultimate)", damage = 10, poison = 1, aoe = true, usable = 1 }
+                    { name = "Infernal Stinger", damage = 10, poison = 1, aoe = true, usable = 1 }
                 }
             },
             lava_tiger = {
@@ -54,7 +54,7 @@ local creatures = {
                     { name = "Burning Leap", damage = 30, usable = 4 },
                     { name = "Fiery Growl", reduce_attack = 1, usable = 3 },
                     { name = "Lava Swipe", damage = 50, usable = 2 },
-                    { name = "Volcanic Fury (Ultimate)", damage = 100, aoe = 1, usable = 1 }
+                    { name = "Volcanic Fury", damage = 100, aoe = 1, usable = 1 }
                 }
             },
             ember_phoenix = {
@@ -68,7 +68,7 @@ local creatures = {
                     { name = "Blazing Wings", damage = 30, aoe = 1, usable = 4 },
                     { name = "Fire Rebirth", heal = 20, usable = 3 },
                     { name = "Infernal Screech", damage = 45, usable = 2 },
-                    { name = "Eternal Blaze (Ultimate)", damage = 120, heal = 1, usable = 1 }
+                    { name = "Eternal Blaze", damage = 120, heal = 1, usable = 1 }
                 }
             },
             magma_serpent = {
@@ -82,7 +82,7 @@ local creatures = {
                     { name = "Fire Breath", damage = 35, aoe = 1, usable = 4 },
                     { name = "Molten Strike", damage = 40, usable = 3 },
                     { name = "Blistering Tail", damage = 50, usable = 2 },
-                    { name = "Infernal Vortex (Ultimate)", damage = 110, stun = 1, usable = 1 }
+                    { name = "Infernal Vortex", damage = 110, stun = 1, usable = 1 }
                 }
             },
             pyro_crab = {
@@ -96,7 +96,7 @@ local creatures = {
                     { name = "Ash Shell", reduce_damage = 30, duration = 2, usable = 3 },
                     { name = "Flame Hammer", damage = 40, usable = 3 },
                     { name = "Eruption Claw", damage = 55, usable = 2 },
-                    { name = "Volcanic Charge (Ultimate)", damage = 120, usable = 1 }
+                    { name = "Volcanic Charge", damage = 120, usable = 1 }
                 }
             },
             smoldering_wasp = {
@@ -110,7 +110,7 @@ local creatures = {
                     { name = "Inferno Swarm", damage = 25, aoe = 1, usable = 4 },
                     { name = "Burning Dive", damage = 40, usable = 3 },
                     { name = "Wing Cyclone", damage = 50, usable = 2 },
-                    { name = "Ash Cloud (Ultimate)", damage = 100, blind = 1, duration = 2, usable = 1 }
+                    { name = "Ash Cloud", damage = 100, blind = 1, duration = 2, usable = 1 }
                 }
             },
             ash_demon = {
@@ -124,7 +124,7 @@ local creatures = {
                     { name = "Hellfire Blaze", damage = 35, aoe = 1, usable = 4 },
                     { name = "Demonic Roar", reduce_speed = 1, usable = 3 },
                     { name = "Ash Storm", damage = 45, usable = 2 },
-                    { name = "Demonic Inferno (Ultimate)", damage = 120, aoe = 1, usable = 1 }
+                    { name = "Demonic Inferno", damage = 120, aoe = 1, usable = 1 }
                 }
             },
             fire_elemental = {
@@ -138,7 +138,7 @@ local creatures = {
                     { name = "Burning Pulse", damage = 25, usable = 5 },
                     { name = "Molten Wall", reduce_damage = 40, duration = 2, usable = 3 },
                     { name = "Infernal Blast", damage = 50, usable = 2 },
-                    { name = "Eruption Nova (Ultimate)", damage = 100, aoe = 1, usable = 1 }
+                    { name = "Eruption Nova", damage = 100, aoe = 1, usable = 1 }
                 }
             }
         }
@@ -156,7 +156,7 @@ local creatures = {
                     { name = "Tidal Rush", damage = 30, usable = 5 },
                     { name = "Aqua Shield", reduce_damage = 30, duration = 2, usable = 3 },
                     { name = "Hydro Slash", damage = 45, usable = 2 },
-                    { name = "Ocean Frenzy (Ultimate)", damage = 110, aoe = 1, usable = 1 }
+                    { name = "Ocean Frenzy", damage = 110, aoe = 1, usable = 1 }
                 }
             },
             tidal_turtle = {
@@ -170,7 +170,7 @@ local creatures = {
                     { name = "Wave Crash", damage = 35, aoe = 1, usable = 4 },
                     { name = "Aqua Armor", absorb = 40, duration = 2, usable = 3 },
                     { name = "Tsunami Charge", damage = 50, usable = 2 },
-                    { name = "Tidal Surge (Ultimate)", damage = 100, aoe = 1, heal = 20, usable = 1 }
+                    { name = "Tidal Surge", damage = 100, aoe = 1, heal = 20, usable = 1 }
                 }
             },
             frost_leviathan = {
@@ -184,7 +184,7 @@ local creatures = {
                     { name = "Frozen Breath", damage = 30, freeze = 1, duration = 1, usable = 5 },
                     { name = "Arctic Roar", reduce_speed = 1, usable = 3 },
                     { name = "Glacial Swipe", damage = 50, usable = 2 },
-                    { name = "Polar Cataclysm (Ultimate)", damage = 120, freeze = 1, aoe = true, usable = 1 }
+                    { name = "Polar Cataclysm", damage = 120, freeze = 1, aoe = true, usable = 1 }
                 }
             },
             coral_serpent = {
@@ -198,7 +198,7 @@ local creatures = {
                     { name = "Water Lash", damage = 25, usable = 5 },
                     { name = "Barrier Reef", reduce_damage = 30, duration = 2, usable = 3 },
                     { name = "Wave Coil", damage = 45, usable = 2 },
-                    { name = "Coral Tsunami (Ultimate)", damage = 110, aoe = 1, usable = 1 }
+                    { name = "Coral Tsunami", damage = 110, aoe = 1, usable = 1 }
                 }
             },
             ocean_spirit = {
@@ -212,7 +212,7 @@ local creatures = {
                     { name = "Spirit Torrent", damage = 30, aoe = 1, usable = 4 },
                     { name = "Water Veil", absorb = 20, duration = 3, usable = 3 },
                     { name = "Crystal Wave", damage = 50, usable = 2 },
-                    { name = "Tidal Redemption (Ultimate)", damage = 120, heal_all = 20, usable = 1 }
+                    { name = "Tidal Redemption", damage = 120, heal_all = 20, usable = 1 }
                 }
             },
             tsunami_crab = {
@@ -226,7 +226,7 @@ local creatures = {
                     { name = "Aqua Cyclone", damage = 30, aoe = 1, usable = 4 },
                     { name = "Shell Barrier", reduce_damage = 50, duration = 1, usable = 3 },
                     { name = "Hydro Claw Strike", damage = 50, usable = 2 },
-                    { name = "Ocean Rage (Ultimate)", damage = 110, stun = 1, usable = 1 }
+                    { name = "Ocean Rage", damage = 110, stun = 1, usable = 1 }
                 }
             },
             abyssal_jellyfish = {
@@ -240,7 +240,7 @@ local creatures = {
                     { name = "Electric Pulse", damage = 30, paralyze = 1, duration = 1, usable = 5 },
                     { name = "Abyssal Shield", absorb = 30, duration = 3, usable = 3 },
                     { name = "Hydro Shock", damage = 45, usable = 2 },
-                    { name = "Abyssal Torrent (Ultimate)", damage = 120, aoe = 1, paralyze = true, duration = 1, usable = 1 }
+                    { name = "Abyssal Torrent", damage = 120, aoe = 1, paralyze = true, duration = 1, usable = 1 }
                 }
             },
             wave_wyvern = {
@@ -254,7 +254,7 @@ local creatures = {
                     { name = "Water Spiral", damage = 30, aoe = 1, usable = 4 },
                     { name = "Wyvern Roar", reduce_attack = 20, usable = 3 },
                     { name = "Hydro Dive", damage = 50, usable = 2 },
-                    { name = "Wyvern’s Wrath (Ultimate)", damage = 110, aoe = 1, usable = 1 }
+                    { name = "Wyvern’s Wrath", damage = 110, aoe = 1, usable = 1 }
                 }
             },
             water_wisp = {
@@ -268,7 +268,7 @@ local creatures = {
                     { name = "Geyser Blast", damage = 30, usable = 5 },
                     { name = "Flowing Form", dodge_next = 1, usable = 3 },
                     { name = "Water Arrow", damage = 45, usable = 2 },
-                    { name = "Torrent Surge (Ultimate)", damage = 100, grant_dodge = 1, usable = 1 }
+                    { name = "Torrent Surge", damage = 100, grant_dodge = 1, usable = 1 }
                 }
             },
             ice_golem = {
@@ -282,7 +282,7 @@ local creatures = {
                     { name = "Frozen Wall", reduce_damage = 40, duration = 2, usable = 4 },
                     { name = "Glacial Impact", damage = 35, aoe = 1, usable = 3 },
                     { name = "Crystal Hammer", damage = 50, usable = 2 },
-                    { name = "Arctic Annihilation (Ultimate)", damage = 120, freeze = 1, aoe = true, usable = 1 }
+                    { name = "Arctic Annihilation", damage = 120, freeze = 1, aoe = true, usable = 1 }
                 }
             }
         }
@@ -300,7 +300,7 @@ local creatures = {
                     { name = "Earthen Shield", reduce_damage = 30, duration = 2, usable = 5 },
                     { name = "Quake Stomp", damage = 40, aoe = 1, usable = 3 },
                     { name = "Boulder Toss", damage = 50, usable = 2 },
-                    { name = "Terra Smash (Ultimate)", damage = 120, aoe = 1, usable = 1 }
+                    { name = "Terra Smash", damage = 120, aoe = 1, usable = 1 }
                 }
             },
             forest_guardian = {
@@ -314,7 +314,7 @@ local creatures = {
                     { name = "Root Grasp", damage = 25, slow = 1, usable = 5 },
                     { name = "Thorn Wall", reflect_damage = 25, duration = 2, usable = 3 },
                     { name = "Leaf Barrage", damage = 45, usable = 2 },
-                    { name = "Nature's Fury (Ultimate)", damage = 100, aoe = 1, heal_all = 20, usable = 1 }
+                    { name = "Nature's Fury", damage = 100, aoe = 1, heal_all = 20, usable = 1 }
                 }
             },
             rock_serpent = {
@@ -328,7 +328,7 @@ local creatures = {
                     { name = "Stone Coil", damage = 30, paralyze = 1, duration = 1, usable = 5 },
                     { name = "Petrify", reduce_attack = 20, usable = 3 },
                     { name = "Crushing Fang", damage = 50, usable = 2 },
-                    { name = "Serpent's Quake (Ultimate)", damage = 110, aoe = 1, stun = true, duration = 1, usable = 1 }
+                    { name = "Serpent's Quake", damage = 110, aoe = 1, stun = true, duration = 1, usable = 1 }
                 }
             },
             sand_beetle = {
@@ -342,7 +342,7 @@ local creatures = {
                     { name = "Dust Cloud", reduce_accuracy = 20, usable = 4 },
                     { name = "Burrow Strike", damage = 35, usable = 3 },
                     { name = "Carapace Slam", damage = 50, usable = 2 },
-                    { name = "Desert Fury (Ultimate)", damage = 110, aoe = 1, usable = 1 }
+                    { name = "Desert Fury", damage = 110, aoe = 1, usable = 1 }
                 }
             },
             iron_rhino = {
@@ -356,7 +356,7 @@ local creatures = {
                     { name = "Charge Smash", damage = 35, aoe = 1, usable = 4 },
                     { name = "Iron Defense", reduce_damage = 40, duration = 2, usable = 3 },
                     { name = "Stampede", damage = 50, usable = 2 },
-                    { name = "Titan Charge (Ultimate)", damage = 120, aoe = 1, stun = true, duration = 1, usable = 1 }
+                    { name = "Titan Charge", damage = 120, aoe = 1, stun = true, duration = 1, usable = 1 }
                 }
             },
             crystal_bear = {
@@ -370,7 +370,7 @@ local creatures = {
                     { name = "Crystal Roar", reduce_speed = 20, usable = 5 },
                     { name = "Reflective Armor", reflect_damage = 30, duration = 2, usable = 3 },
                     { name = "Shattering Swipe", damage = 50, usable = 2 },
-                    { name = "Crystal Avalanche (Ultimate)", damage = 120, freeze = 1, aoe = true, duration = 1, usable = 1 }
+                    { name = "Crystal Avalanche", damage = 120, freeze = 1, aoe = true, duration = 1, usable = 1 }
                 }
             },
             mud_basilisk = {
@@ -384,7 +384,7 @@ local creatures = {
                     { name = "Quagmire Grip", damage = 25, slow = 1, duration = 1, usable = 5 },
                     { name = "Mud Barrier", reduce_damage = 30, duration = 2, usable = 3 },
                     { name = "Venom Strike", damage = 45, poison = 1, usable = 2 },
-                    { name = "Basilisk's Curse (Ultimate)", damage = 100, aoe = 1, poison = true, usable = 1 }
+                    { name = "Basilisk's Curse", damage = 100, aoe = 1, poison = true, usable = 1 }
                 }
             },
             thorned_stag = {
@@ -398,7 +398,7 @@ local creatures = {
                     { name = "Thorn Burst", damage = 35, aoe = 1, usable = 4 },
                     { name = "Camouflage", dodge_next = 1, usable = 3 },
                     { name = "Branch Slam", damage = 50, usable = 2 },
-                    { name = "Forest Storm (Ultimate)", damage = 110, aoe = 1, reduce_attack = 20, usable = 1 }
+                    { name = "Forest Storm", damage = 110, aoe = 1, reduce_attack = 20, usable = 1 }
                 }
             },
             terra_wurm = {
@@ -412,7 +412,7 @@ local creatures = {
                     { name = "Ground Collapse", damage = 30, aoe = 1, usable = 4 },
                     { name = "Sand Shift", reduce_speed = 20, usable = 3 },
                     { name = "Earth Fang", damage = 50, usable = 2 },
-                    { name = "Wurmquake (Ultimate)", damage = 120, aoe = 1, usable = 1 }
+                    { name = "Wurmquake", damage = 120, aoe = 1, usable = 1 }
                 }
             },
             earth_elemental = {
@@ -426,7 +426,7 @@ local creatures = {
                     { name = "Quaking Smash", damage = 35, aoe = 1, usable = 4 },
                     { name = "Earthen Armor", reduce_damage = 40, duration = 2, usable = 3 },
                     { name = "Terra Crush", damage = 50, usable = 2 },
-                    { name = "Elemental Wrath (Ultimate)", damage = 120, aoe = 1, increase_defense = true, duration = 2, usable = 1 }
+                    { name = "Elemental Wrath", damage = 120, aoe = 1, increase_defense = true, duration = 2, usable = 1 }
                 }
             }
         }
@@ -444,7 +444,7 @@ local creatures = {
                     { name = "Electro Shock", damage = 30, stun = 1, duration = 1, usable = 4 },
                     { name = "Sky Dive", damage = 40, usable = 3 },
                     { name = "Thunder Strike", damage = 50, aoe = 1, usable = 2 },
-                    { name = "Stormcaller (Ultimate)", damage = 120, aoe = 1, reduce_speed = 20, usable = 1 }
+                    { name = "Stormcaller", damage = 120, aoe = 1, reduce_speed = 20, usable = 1 }
                 }
             },
             sky_serpent = {
@@ -458,7 +458,7 @@ local creatures = {
                     { name = "Coiling Crush", damage = 30, paralyze = 1, duration = 1, usable = 5 },
                     { name = "Cyclone Shot", damage = 40, aoe = 1, usable = 3 },
                     { name = "Fang Strike", damage = 50, usable = 2 },
-                    { name = "Aerial Wrath (Ultimate)", damage = 110, aoe = 1, increase_evasion = true, duration = 2, usable = 1 }
+                    { name = "Aerial Wrath", damage = 110, aoe = 1, increase_evasion = true, duration = 2, usable = 1 }
                 }
             },
             storm_falcon = {
@@ -472,7 +472,7 @@ local creatures = {
                     { name = "Bolt Dive", damage = 30, stun = 1, duration = 1, usable = 5 },
                     { name = "Wing Gust", damage = 35, aoe = 1, usable = 3 },
                     { name = "Hurricane Sweep", damage = 50, reduce_accuracy = 1, usable = 2 },
-                    { name = "Tempest Break (Ultimate)", damage = 120, aoe = 1, stun_all = true, usable = 1 }
+                    { name = "Tempest Break", damage = 120, aoe = 1, stun_all = true, usable = 1 }
                 }
             },
             wind_elemental = {
@@ -486,7 +486,7 @@ local creatures = {
                     { name = "Whirlwind Crush", damage = 30, aoe = 1, usable = 4 },
                     { name = "Wind Shield", reduce_damage = 30, duration = 2, usable = 3 },
                     { name = "Air Slice", damage = 45, usable = 2 },
-                    { name = "Tornado Burst (Ultimate)", damage = 110, aoe = 1, increase_speed = true, usable = 1 }
+                    { name = "Tornado Burst", damage = 110, aoe = 1, increase_speed = true, usable = 1 }
                 }
             },
             lightning_wolf = {
@@ -500,7 +500,7 @@ local creatures = {
                     { name = "Electric Howl", damage = 35, aoe = 1, reduce_speed = 20, usable = 4 },
                     { name = "Flash Sprint", avoid_next = 1, increase_speed = true, usable = 3 },
                     { name = "Volt Strike", damage = 50, usable = 2 },
-                    { name = "Storm Surge (Ultimate)", damage = 120, aoe = 1, paralyze_all = true, duration = 1, usable = 1 }
+                    { name = "Storm Surge", damage = 120, aoe = 1, paralyze_all = true, duration = 1, usable = 1 }
                 }
             },
             cloud_drake = {
@@ -514,7 +514,7 @@ local creatures = {
                     { name = "Mist Veil", reduce_accuracy=20, duration = 2, usable = 5 },
                     { name = "Lightning Bolt", damage = 40, stun = 1, duration = 1, usable = 3 },
                     { name = "Sky Barrage", damage = 50, aoe = 1, usable = 2 },
-                    { name = "Tempest Fury (Ultimate)", damage = 120, aoe = 1, stun_all = true, usable = 1 }
+                    { name = "Tempest Fury", damage = 120, aoe = 1, stun_all = true, usable = 1 }
                 }
             },
             gale_hawk = {
@@ -528,7 +528,7 @@ local creatures = {
                     { name = "Wind Blade", damage = 30, usable = 5 },
                     { name = "Hawk Dive", damage = 35, usable = 3 },
                     { name = "Gust Shield", reduce_damage=30, duration = 2, usable = 3 },
-                    { name = "Hurricane Fury (Ultimate)", damage = 110, aoe = 1, increase_evasion = true, duration = 2, usable = 1 }
+                    { name = "Hurricane Fury", damage = 110, aoe = 1, increase_evasion = true, duration = 2, usable = 1 }
                 }
             },
             zephyr_spirit = {
@@ -542,7 +542,7 @@ local creatures = {
                     { name = "Whispering Wind", heal = 20, usable = 5 },
                     { name = "Air Shield", reduce_damage=30, duration = 2, usable = 3 },
                     { name = "Cyclone Strike", damage = 45, usable = 2 },
-                    { name = "Zephyr's Wrath (Ultimate)", damage = 100, aoe = 1, increase_speed = true, duration = 2, usable = 1 }
+                    { name = "Zephyr's Wrath", damage = 100, aoe = 1, increase_speed = true, duration = 2, usable = 1 }
                 }
             }
         }
@@ -560,7 +560,7 @@ local creatures = {
                     { name = "Cloak of Darkness", reduce_accuracy=20, duration = 2, usable = 5 },
                     { name = "Nightmare Slash", damage = 40, usable = 3 },
                     { name = "Darkness Veil", reduce_damage=30, duration = 2, usable = 2 },
-                    { name = "Eclipse (Ultimate)", damage = 120, aoe = 1, blind = true, duration = 1, usable = 1 }
+                    { name = "Eclipse", damage = 120, aoe = 1, blind = true, duration = 1, usable = 1 }
                 }
             },
             abyssal_wraith = {
@@ -574,7 +574,7 @@ local creatures = {
                     { name = "Spectral Grasp", damage = 30, reduce_speed=20, usable = 4 },
                     { name = "Wraith's Curse", damage = 35, poison = 1, usable = 3 },
                     { name = "Phantom Strike", damage = 50, usable = 2 },
-                    { name = "Abyssal Howl (Ultimate)", damage = 110, aoe = 1, fear = true, duration = 1, usable = 1 }
+                    { name = "Abyssal Howl", damage = 110, aoe = 1, fear = true, duration = 1, usable = 1 }
                 }
             },
             dark_elemental = {
@@ -588,7 +588,7 @@ local creatures = {
                     { name = "Void Pulse", damage = 30, aoe = 1, usable = 4 },
                     { name = "Dark Shield", reduce_damage=30, duration = 2, usable = 3 },
                     { name = "Nightmare Wave", damage = 45, usable = 2 },
-                    { name = "Oblivion (Ultimate)", damage = 120, aoe = 1, heal_all = 20, usable = 1 }
+                    { name = "Oblivion", damage = 120, aoe = 1, heal_all = 20, usable = 1 }
                 }
             },
             cursed_lich = {
@@ -602,7 +602,7 @@ local creatures = {
                     { name = "Bone Shard", damage = 30, usable = 5 },
                     { name = "Lich's Grasp", reduce_attack=20, usable = 3 },
                     { name = "Deathly Chill", damage = 50, freeze = 1, usable = 2 },
-                    { name = "Requiem (Ultimate)", damage = 120, aoe = 1, revive_all = true, usable = 1 }
+                    { name = "Requiem", damage = 120, aoe = 1, revive_all = true, usable = 1 }
                 }
             },
             night_stalker = {
@@ -616,7 +616,7 @@ local creatures = {
                     { name = "Veil of Darkness", reduce_accuracy=20, duration = 2, usable = 5 },
                     { name = "Creeping Terror", damage = 35, fear = 1, usable = 3 },
                     { name = "Dark Claw", damage = 50, usable = 2 },
-                    { name = "Nightmare (Ultimate)", damage = 110, aoe = 1, blind = true, duration = 1, usable = 1 }
+                    { name = "Nightmare", damage = 110, aoe = 1, blind = true, duration = 1, usable = 1 }
                 }
             },
             void_reaper = {
@@ -630,7 +630,7 @@ local creatures = {
                     { name = "Void Grasp", damage = 35, reduce_speed=20, usable = 4 },
                     { name = "Eclipse Shield", reduce_damage=40, duration = 2, usable = 3 },
                     { name = "Reaping Strike", damage = 50, usable = 2 },
-                    { name = "Void Cataclysm (Ultimate)", damage = 120, aoe = 1, drain_health = true, usable = 1 }
+                    { name = "Void Cataclysm", damage = 120, aoe = 1, drain_health = true, usable = 1 }
                 }
             },
             dark_familiar = {
@@ -644,7 +644,7 @@ local creatures = {
                     { name = "Cursed Howl", damage = 20, reduce_attack=10, usable = 5 },
                     { name = "Dark Pact", absorb_damage_for_allies = 1, duration = 2, usable = 3 },
                     { name = "Nightshade Strike", damage = 40, usable = 2 },
-                    { name = "Familiar's Wrath (Ultimate)", damage = 100, aoe = 1, heal_all = 20, usable = 1 }
+                    { name = "Familiar's Wrath", damage = 100, aoe = 1, heal_all = 20, usable = 1 }
                 }
             }
         }
