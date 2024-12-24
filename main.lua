@@ -1,4 +1,5 @@
 local creatures = require("creatures")
+local attacks   = require("attacks")
 
 local function newButton(text, fn) 
     return { 
@@ -16,20 +17,7 @@ local currentScene = "menu"
 
 local all_creatures, codex_creatures, ai_codex_creatures = {}, {}, {}
 
-local function drawCreaturesNames(x, y, creature)
-	fontSize = 32
-	spacing  = 10
-
-	local font = love.graphics.newFont(fontSize)
-	love.graphics.setFont(font)
-	love.graphics.setColor(0, 0, 0)
-
-	love.graphics.print(creature.name, x, y * (fontSize + spacing))
-	love.graphics.setFont(love.graphics.getFont())
-	love.graphics.setColor(1, 1, 1)
-end
-
-local function drawProgressBar(x, y, current, max, color)
+local function drawProgressBar(x, y, current, max, color, name)
     local width = 400
     local height = 30
     local progress = current / max
@@ -85,7 +73,7 @@ local function drawAttacks(X, Y, attacks)
 				local scaleY = imgHeight / boxHeight
 				love.graphics.draw(img, x + 10, y + 20, 0, math.min(scaleX, scaleY))
 			end
-		end`
+		end
 
 		love.graphics.setFont(love.graphics.newFont(20))	
 
@@ -298,11 +286,8 @@ function drawGame(WINDOW_WIDTH, WINDOW_HEIGHT)
       love.graphics.print("Codex not loaded!", 10 , 10)
     end
 
-    drawCreaturesNames(stats_x, stats_y, codex_creatures[1])
-    drawCreaturesNames(ai_stats_x, ai_stats_y, ai_codex_creatures[1])
-
-    drawProgressBar(stats_x, stats_y, health, codex_creatures[1].health, { 0, 1, 0 })
-    drawProgressBar(ai_stats_x, ai_stats_y, ai_health, ai_codex_creatures[1].health, { 1, 0, 0 })
+    drawProgressBar(stats_x, stats_y, health, codex_creatures[1].health, { 0, 1, 0 }, codex_creatures[1].name)
+    drawProgressBar(ai_stats_x, ai_stats_y, ai_health, ai_codex_creatures[1].health, { 1, 0, 0 }, ai_codex_creatures[1].name)
  
     drawAttacks(stats_x, stats_y + 50, codex_creatures[1].attacks)
     drawAttacks(ai_stats_x + 60, ai_stats_y + 50, ai_codex_creatures[1].attacks)
@@ -362,6 +347,16 @@ function drawEmptyScene(WINDOW_WIDTH, WINDOW_HEIGHT)
     love.graphics.print("Local Multiplayer", WINDOW_WIDTH / 2 - 150, WINDOW_HEIGHT / 2)
 end
 
-function love.update(dt)
-  
+function love.keyreleased(key)
+    if key == "q" then
+        print("Q Key Released")
+    elseif key == "w" then
+        print("W Key Released")
+    elseif key == "e" then
+        print("E Key Released")
+    elseif key == "r" then
+        print("R Key Released")
+    elseif key == "t" then
+        print("T Key Released")
+    end
 end
